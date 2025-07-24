@@ -1,20 +1,25 @@
 import React from 'react';
-import Navbar from '../../components/navbar/navbar.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './layout/layout.jsx';  // Asegúrate de importar tu Layout correctamente
 import Home from './pages/Home.jsx';
-import Footer from '../../components/navbar/footer/Footer.jsx';
-
+import Productos from './pages/Productos.jsx';
+import Soporte from './pages/Soporte.jsx';
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Home/>
-      <Footer/>
-      
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="productos" element={<Productos />} />
+          <Route path="soporte" element={<Soporte />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
 
 
