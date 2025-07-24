@@ -1,14 +1,14 @@
 import React from 'react';
-import Navbar from './navbar/navbar.jsx';
-import Body from './Body.jsx';
-import Footer from './Footer.jsx';
+import Navbar from '../../components/navbar/navbar.jsx';
+import Home from './pages/Home.jsx';
+import Footer from '../../components/navbar/footer/Footer.jsx';
 
 
 function App() {
   return (
     <>
       <Navbar />
-      <Body/>
+      <Home/>
       <Footer/>
       
     </>
