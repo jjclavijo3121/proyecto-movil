@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './layout/layout.jsx';  // Asegúrate de importar tu Layout correctamente
 import Home from './pages/Home.jsx';
 import Productos from './pages/Productos.jsx';
-import Soporte from './pages/Soporte.jsx';
 import QuienesSomos from './pages/QuienesSomos.jsx';
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="productos" element={<Productos />} />
-          <Route path="soporte" element={<Soporte />} />
           <Route path="quienes-somos" element={<QuienesSomos />} />
         </Route>
       </Routes>

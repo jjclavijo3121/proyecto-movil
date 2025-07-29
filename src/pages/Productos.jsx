@@ -8,7 +8,7 @@ const productos = [
     marca: 'APPLE',
     precioOriginal: 2899990,
     precioActual: 1899990,
-    imagen: '/public/iphone12.png',
+    imagen: '/iphone12.png',
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const productos = [
     marca: 'APPLE',
     precioOriginal: 3999990,
     precioActual: 2949990,
-    imagen: '/public/iphone14.png',
+    imagen: '/iphone14.png',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const productos = [
     marca: 'APPLE',
     precioOriginal: 3399990,
     precioActual: 2699990,
-    imagen: '/public/ipadmini.png',
+    imagen: '/ipadmini.png',
   },
   {
     id: 4,
@@ -32,57 +32,69 @@ const productos = [
     marca: "APPLE",
     precioOriginal: 3299000,
     precioActual: 2990000,
-    imagen: "/public/iphone13.png"
+    imagen: "/iphone13.png"
   },
   {
     id: 5,
     nombre: "iPhone 11 128GB Sim Fisica",
     marca: "APPLE",
-    precioOriginal: "1990000",
-    precioActual: "1390000"
-
+    precioOriginal: 1990000,
+    precioActual: 1390000,
+    imagen: "/iphone11.png"
   },
   {
     id: 6,
     nombre: "iPhone 12 128GB Sim Fisica",
     marca: "APPLE",
-    precioOriginal: "2390000",
-    precioActual: "1890000"
-    
+    precioOriginal: 2390000,
+    precioActual: 1890000,
+    imagen: "/iphone12a.png"
   },
   {
     id: 7,
     nombre: "iPhone 12 128GB Sim Fisica",
     marca: "APPLE",
-    precioOriginal: "2390000",
-    precioActual: "1890000"
-    
+    precioOriginal: 2390000,
+    precioActual: 1890000,
+    imagen: "/iphone12b.png"
   },
   {
     id: 8,
     nombre: "iPhone 12 128GB Sim Fisica",
     marca: "APPLE",
-    precioOriginal: "2390000",
-    precioActual: "1890000"
-    
+    precioOriginal: 2390000,
+    precioActual: 1890000,
+    imagen: "/iphone12c.png"
   },
-
 ];
 
 const Productos = () => {
   return (
-    <div className="productos-container">
-      {productos.map((prod) => (
-        <div className="producto-card" key={prod.id}>
-          <img src={prod.imagen} alt={prod.nombre} />
-          <h3>{prod.nombre}</h3>
-          <p className="marca">{prod.marca}</p>
-          <p className="precio-original">${prod.precioOriginal.toLocaleString()}</p>
-          <p className="precio-actual">${prod.precioActual.toLocaleString()}</p>
-        </div>
-      ))}
-    </div>
+    <>
+      {/* Banner de video */}
+      <div className="productos-banner-video">
+        <video autoPlay muted loop playsInline>
+          <source src="/banner_video.mp4" type="video/mp4" />
+          Tu navegador no soporta este video.
+        </video>
+      </div>
+
+
+      {/* Cards de productos */}
+      <div className="productos-container">
+        {productos.map((prod) => (
+          <div className="producto-card" key={prod.id}>
+            <img src={prod.imagen} alt={prod.nombre} />
+            <h3>{prod.nombre}</h3>
+            <p className="marca">{prod.marca}</p>
+            <p className="precio-original">${Number(prod.precioOriginal).toLocaleString()}</p>
+            <p className="precio-actual">${Number(prod.precioActual).toLocaleString()}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
 export default Productos;
+
