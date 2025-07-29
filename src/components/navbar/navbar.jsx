@@ -36,6 +36,7 @@ const Navbar = () => {
           <li><Link to="/">Inicio</Link></li>
           <li><Link to="/productos">Productos</Link></li>
           <li><Link to="/soporte">Soporte</Link></li>
+          <li><Link to="/quienes-somos">Quienes Somos</Link></li>
         </ul>
         <div className="navbar-icons">
           <div className="search-animated-container">

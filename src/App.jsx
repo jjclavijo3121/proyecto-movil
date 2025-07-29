@@ -4,6 +4,7 @@ import Layout from './layout/layout.jsx';  // Asegúrate de importar tu Layout c
 import Home from './pages/Home.jsx';
 import Productos from './pages/Productos.jsx';
 import Soporte from './pages/Soporte.jsx';
+import QuienesSomos from './pages/QuienesSomos.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="productos" element={<Productos />} />
           <Route path="soporte" element={<Soporte />} />
+          <Route path="quienes-somos" element={<QuienesSomos />} />
         </Route>
       </Routes>
     </BrowserRouter>

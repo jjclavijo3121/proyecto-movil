@@ -8,7 +8,7 @@ const productos = [
     marca: 'APPLE',
     precioOriginal: 2899990,
     precioActual: 1899990,
-    imagen: 'https://i.imgur.com/xDBt6Os.png',
+    imagen: '/public/iphone12.png',
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ const productos = [
     marca: 'APPLE',
     precioOriginal: 3999990,
     precioActual: 2949990,
-    imagen: '/public/iphone14pro.png',
+    imagen: '/public/iphone14.png',
   },
   {
     id: 3,
@@ -24,9 +24,49 @@ const productos = [
     marca: 'APPLE',
     precioOriginal: 3399990,
     precioActual: 2699990,
-    imagen: '/public/iphone12.png',
+    imagen: '/public/ipadmini.png',
   },
-  // Agrega más productos aquí...
+  {
+    id: 4,
+    nombre: "iPhone 13 128GB sim virtual",
+    marca: "APPLE",
+    precioOriginal: 3299000,
+    precioActual: 2990000,
+    imagen: "/public/iphone13.png"
+  },
+  {
+    id: 5,
+    nombre: "iPhone 11 128GB Sim Fisica",
+    marca: "APPLE",
+    precioOriginal: "1990000",
+    precioActual: "1390000"
+
+  },
+  {
+    id: 6,
+    nombre: "iPhone 12 128GB Sim Fisica",
+    marca: "APPLE",
+    precioOriginal: "2390000",
+    precioActual: "1890000"
+    
+  },
+  {
+    id: 7,
+    nombre: "iPhone 12 128GB Sim Fisica",
+    marca: "APPLE",
+    precioOriginal: "2390000",
+    precioActual: "1890000"
+    
+  },
+  {
+    id: 8,
+    nombre: "iPhone 12 128GB Sim Fisica",
+    marca: "APPLE",
+    precioOriginal: "2390000",
+    precioActual: "1890000"
+    
+  },
+
 ];
 
 const Productos = () => {
