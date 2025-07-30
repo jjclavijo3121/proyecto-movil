@@ -1,38 +1,26 @@
-// src/components/CardDetails.jsx
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import productos from '../../data/DataProductos.js';
 import './CardDetails.css';
 
 const CardDetails = () => {
-  const { id } = useParams(); // ID de la URL
+  const { id } = useParams(); // ID desde la URL
+  const producto = productos.find((p) => p.id === Number(id)); // Buscar el producto correspondiente
 
-  // 🔁 Simulación de datos para este ejemplo
-  const producto = {
-    id,
-    marca: 'Apple',
-    nombre: 'iPhone 15 128GB Nuevo sim física',
-    precioOriginal: 3449990,
-    precioDescuento: 2869990,
-    colores: ['Azul', 'Amarillo', 'Rosado', 'Negro', 'Verde'],
-    imagenPrincipal: '/imagenes/iphone-blanco.png',
-    imagenes: [
-      '/imagenes/iphone-amarillo.png',
-      '/imagenes/iphone-rosado.png',
-      '/imagenes/iphone-negro.png',
-      '/imagenes/iphone-verde.png',
-      '/imagenes/iphone-azul.png'
-    ]
-  };
+  // Validación por si no se encuentra el producto
+  if (!producto) {
+    return <div style={{ padding: '2rem' }}>Producto no encontrado.</div>;
+  }
 
   return (
     <div className="detalle-container">
       <div className="imagenes">
         <div className="miniaturas">
-          {producto.imagenes.map((img, idx) => (
-            <img key={idx} src={img} alt={`miniatura-${idx}`} className="miniatura" />
-          ))}
+        {producto.imagenes?.map((img, idx) => (
+          <img key={idx} src={img} alt={`miniatura-${idx}`} className="miniatura" />
+        ))}
         </div>
-        <img src={producto.imagenPrincipal} alt={producto.nombre} className="imagen-principal" />
+        <img src={producto.imagenPrincipal || producto.imagenes[0]} alt={producto.nombre} className="imagen-principal" />
       </div>
 
       <div className="info-producto">
@@ -40,7 +28,7 @@ const CardDetails = () => {
         <h1>{producto.nombre}</h1>
         <div className="precios">
           <span className="precio-original">${producto.precioOriginal.toLocaleString()}</span>
-          <span className="precio-descuento">${producto.precioDescuento.toLocaleString()}</span>
+          <span className="precio-descuento">${producto.precioActual.toLocaleString()}</span>
         </div>
         <p className="info-envio">Impuesto incluido. Los gastos de envío se calculan en la pantalla de pagos.</p>
 

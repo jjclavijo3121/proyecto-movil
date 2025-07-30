@@ -1,73 +1,7 @@
 import React from 'react';
 import './styles/Productos.css';
-import { Link } from 'react-router-dom'; // <-- Importar Link
-
-const productos = [
-  {
-    id: 1,
-    nombre: 'iPhone 12 Pro Max 256GB De EXH + Vidrio Atomic Semiautomático',
-    marca: 'APPLE',
-    precioOriginal: 2899990,
-    precioActual: 1899990,
-    imagen: '/iphone12.png',
-  },
-  {
-    id: 2,
-    nombre: 'iPhone 14 Pro Max 128GB De EXH sim virtual',
-    marca: 'APPLE',
-    precioOriginal: 3999990,
-    precioActual: 2949990,
-    imagen: '/iphone14.png',
-  },
-  {
-    id: 3,
-    nombre: 'iPad Mini 7TH Generación 128GB',
-    marca: 'APPLE',
-    precioOriginal: 3399990,
-    precioActual: 2699990,
-    imagen: '/ipadmini.png',
-  },
-  {
-    id: 4,
-    nombre: "iPhone 13 128GB sim virtual",
-    marca: "APPLE",
-    precioOriginal: 3299000,
-    precioActual: 2990000,
-    imagen: "/iphone13.png"
-  },
-  {
-    id: 5,
-    nombre: "iPhone 11 128GB Sim Fisica",
-    marca: "APPLE",
-    precioOriginal: 1990000,
-    precioActual: 1390000,
-    imagen: "/iphone11.png"
-  },
-  {
-    id: 6,
-    nombre: "iPhone 12 128GB Sim Fisica",
-    marca: "APPLE",
-    precioOriginal: 2390000,
-    precioActual: 1890000,
-    imagen: "/iphone12a.png"
-  },
-  {
-    id: 7,
-    nombre: "iPhone 12 128GB Sim Fisica",
-    marca: "APPLE",
-    precioOriginal: 2390000,
-    precioActual: 1890000,
-    imagen: "/iphone12b.png"
-  },
-  {
-    id: 8,
-    nombre: "iPhone 12 128GB Sim Fisica",
-    marca: "APPLE",
-    precioOriginal: 2390000,
-    precioActual: 1890000,
-    imagen: "/iphone12c.png"
-  },
-];
+import { Link } from 'react-router-dom'; 
+import productos from "../data/DataProductos.js";
 
 const Productos = () => {
   return (
@@ -105,8 +39,10 @@ const Productos = () => {
       <div className="productos-container">
         {productos.map((prod) => (
           <Link to={`/producto/${prod.id}`} key={prod.id} className="producto-card-link">
+            {/* IMAGEN FUERA DE LA CARD */}
+            <img className="imagen-destacada" src={prod.imagen} alt={prod.nombre} />
+
             <div className="producto-card">
-              <img src={prod.imagen} alt={prod.nombre} />
               <h3>{prod.nombre}</h3>
               <p className="marca">{prod.marca}</p>
               <p className="precio-original">${Number(prod.precioOriginal).toLocaleString()}</p>
