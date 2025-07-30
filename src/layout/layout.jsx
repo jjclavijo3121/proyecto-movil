@@ -5,13 +5,20 @@ import { Outlet } from 'react-router-dom';
 
 function Layout() {
   return (
-    <>
+    <div style={{ 
+      minHeight: '100vh', 
+      display: 'flex', 
+      flexDirection: 'column' 
+    }}>
       <Navbar />
-      <main style={{ padding: '0rem' }}>
+      <main style={{ 
+        flex: 1, 
+        paddingTop: '90px' // Ajusta este valor si tu navbar es más alto o más bajo
+      }}>
         <Outlet />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
 

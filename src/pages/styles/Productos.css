@@ -67,6 +67,49 @@
     height: 100%;
     object-fit: contain; /* <-- cambia de cover a contain */
   }
+
+  .coleccion-header {
+    background-color: #000; /* Fondo negro */
+    color: white;
+    padding: 10rem;
+    text-align: center;
+    border-bottom: 1px solid #333;
+  }
+  
+  .filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+  }
+  
+  .filtro-btn,
+  .caracteristicas-btn {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    font-weight: 800;
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+  }
+  
+  .filtro-btn:hover,
+  .caracteristicas-btn:hover {
+    background-color: white;
+    color: #000;
+  }  
+  
+  .descripcion {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
   
   
   

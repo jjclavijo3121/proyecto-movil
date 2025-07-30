@@ -1,7 +1,7 @@
 .body-background {
   min-height: 400px;
   width: 100vw;
-  background: #eeeeee;
+  background: #fdfdfd;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;

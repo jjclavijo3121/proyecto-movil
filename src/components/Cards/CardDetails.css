@@ -1,0 +1,121 @@
+.detalle-container {
+    display: flex;
+    padding: 15.5rem;
+    gap: 3rem;
+    flex: 1;
+    color: #fff;
+    background-color: #121212;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .imagenes {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .miniaturas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .miniatura {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .imagen-principal {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  .info-producto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .marca {
+    color: #ccc;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+  }
+  
+  .precios {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+  
+  .precio-original {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1rem;
+  }
+  
+  .precio-descuento {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #35ff75;
+  }
+  
+  .info-envio {
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem;
+    opacity: 0.8;
+  }
+  
+  .colores {
+    margin-top: 1rem;
+  }
+  
+  .color-options {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  
+  .color-btn {
+    background: transparent;
+    border: 1px solid #aaa;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .color-btn:hover {
+    background: #333;
+  }
+  
+  .envio {
+    margin-top: 1.5rem;
+  }
+  
+  .comparar-btn {
+    margin-top: 2rem;
+    background: #fff;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .comparar-btn:hover {
+    background: #ddd;
+  }
+  
