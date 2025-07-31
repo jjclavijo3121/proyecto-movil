@@ -39,14 +39,14 @@ const Productos = () => {
       <div className="productos-container">
         {productos.map((prod) => (
           <Link to={`/producto/${prod.id}`} key={prod.id} className="producto-card-link">
-            {/* IMAGEN FUERA DE LA CARD */}
-            <img className="imagen-destacada" src={prod.imagen} alt={prod.nombre} />
-
-            <div className="producto-card">
-              <h3>{prod.nombre}</h3>
-              <p className="marca">{prod.marca}</p>
-              <p className="precio-original">${Number(prod.precioOriginal).toLocaleString()}</p>
-              <p className="precio-actual">${Number(prod.precioActual).toLocaleString()}</p>
+            <div className="producto-card-wrapper">
+              <img src={prod.imagen} alt={prod.nombre} className="producto-imagen-flotante" />
+              <div className="producto-card">
+                <h3>{prod.nombre}</h3>
+                <p className="marca">{prod.marca}</p>
+                <p className="precio-original">${Number(prod.precioOriginal).toLocaleString()}</p>
+                <p className="precio-actual">${Number(prod.precioActual).toLocaleString()}</p>
+              </div>
             </div>
           </Link>
         ))}

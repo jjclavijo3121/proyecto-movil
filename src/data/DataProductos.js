@@ -1,7 +1,7 @@
 const productos = [
   {
     id: 1,
-    nombre: 'iPhone 12 Pro Max 256GB De EXH + Vidrio Atomic Semiautomático',
+    nombre: 'iPhone 12 Pro Max 256GB De EXH',
     marca: 'APPLE',
     imagenPrincipal: '/iphone12.png',
     imagenes: [

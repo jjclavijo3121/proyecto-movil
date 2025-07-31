@@ -1,38 +1,50 @@
 .productos-container {
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    gap: 100px;
-    padding: 100px;
-    justify-content: center;
-    background-color: #eeeeee;
-  }
+  display: grid;
+  grid-template-columns: repeat(4, 280px); /* antes era 1fr, ahora tarjetas más anchas */
+  gap: 40px;
+  padding: 100px;
+  justify-content: center;
+  background-color: #eeeeee;
+}
+
+
   
   .producto-card {
-    background-color: white;
-    width: 250px;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease-in-out;
+  background-color: white;
+  border-radius: 12px;
+  width: 280px;
+  height: 420px; /* Fijamos altura para que todas midan lo mismo */
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Padding superior para la imagen */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  transition: transform 0.2s;
   }
-  
+
   .producto-card:hover {
-    transform: scale(1.05);
+  transform: translateY(-4px);
   }
+
   
   .producto-card img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* o 'cover' si quieres que se ajuste sin bordes */
     border-radius: 10px;
   }
+  
+  
   
   .producto-card h3 {
     font-size: 16px;
     color: #222;
     margin: 10px 0;
+    min-height: 48px; /* Fuerza espacio para 2-3 líneas */
+    overflow: hidden;
   }
+  
   
   .marca {
     font-size: 14px;
@@ -109,6 +121,33 @@
     max-width: 800px;
     margin: 0 auto;
   }
+  
+  .producto-card-wrapper {
+    width: 100%; /* se ajusta al grid */
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .producto-card-wrapper {
+    width: 100%; /* se ajusta al grid */
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }    
+  
+  
+  .producto-imagen-flotante {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: auto;
+    z-index: 2;
+  }
+  
   
   
   
