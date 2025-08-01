@@ -35,25 +35,32 @@ const Productos = () => {
         </div>
       </div>
 
-      {/* Cards de productos */}
-      <div className="productos-container">
-        {productos.map((prod) => (
-          <Link to={`/producto/${prod.id}`} key={prod.id} className="producto-card-link">
-            <div className="producto-card-wrapper">
-              <img src={prod.imagen} alt={prod.nombre} className="producto-imagen-flotante" />
-              <div className="producto-card">
-                <h3>{prod.nombre}</h3>
-                <p className="marca">{prod.marca}</p>
-                <p className="precio-original">${Number(prod.precioOriginal).toLocaleString()}</p>
-                <p className="precio-actual">${Number(prod.precioActual).toLocaleString()}</p>
+
+      <div className="productos-wrapper">
+        <div className="productos-container">
+          {productos.map((prod) => (
+            <Link to={`/producto/${prod.id}`} key={prod.id} className="producto-card-link">
+              <div className="producto-card-wrapper">
+                <div className="producto-card">
+                  <img
+                    src={prod.imagenPrincipal || prod.imagen || '/placeholder.jpg'}
+                    alt={prod.nombre}
+                    className="producto-imagen-ajustada"
+                  />
+                  <h3>{prod.nombre}</h3>
+                  <p className="marca">{prod.marca}</p>
+                  <p className="precio-original">${Number(prod.precioOriginal).toLocaleString()}</p>
+                  <p className="precio-actual">${Number(prod.precioActual).toLocaleString()}</p>
+                </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
     </>
   );
 };
 
 export default Productos;
+
 

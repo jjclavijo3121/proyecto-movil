@@ -1,155 +1,140 @@
 .productos-container {
-  display: grid;
-  grid-template-columns: repeat(4, 280px); /* antes era 1fr, ahora tarjetas más anchas */
-  gap: 40px;
-  padding: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
   justify-content: center;
-  background-color: #eeeeee;
+  padding: 90px 220px;
+  background-color: #f7f7f7;
+}
+
+.producto-card-wrapper {
+  width: 640px;
+  max-width: 300px;
+}
+
+/* Quitar apariencia de link en todas las cards */
+.producto-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.producto-card-link * {
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
 
-  
-  .producto-card {
-  background-color: white;
-  border-radius: 12px;
-  width: 280px;
-  height: 420px; /* Fijamos altura para que todas midan lo mismo */
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px; /* Padding superior para la imagen */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+.producto-card {
+  height: 430px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
   text-align: center;
-  transition: transform 0.2s;
-  }
+}
 
-  .producto-card:hover {
-  transform: translateY(-4px);
-  }
+.producto-card:hover {
+  transform: translateY(-6px);
+}
 
-  
-  .producto-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: contain; /* o 'cover' si quieres que se ajuste sin bordes */
-    border-radius: 10px;
-  }
-  
-  
-  
-  .producto-card h3 {
-    font-size: 16px;
-    color: #222;
-    margin: 10px 0;
-    min-height: 48px; /* Fuerza espacio para 2-3 líneas */
-    overflow: hidden;
-  }
-  
-  
-  .marca {
-    font-size: 14px;
-    color: gray;
-  }
-  
-  .precio-original {
-    text-decoration: line-through;
-    color: rgb(130, 130, 130);
-    font-size: 14px;
-  }
-  
-  .precio-actual {
-    font-size: 18px;
-    color: #000;
-    font-weight: bold;
-  }
 
-  .productos-banner-video {
-    position: relative;
-    width: 100%;
-    height: 775px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-  }
-  
-  .productos-banner-video video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* <-- cambia de cover a contain */
-  }
+.producto-imagen-ajustada {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
 
-  .coleccion-header {
-    background-color: #000; /* Fondo negro */
-    color: white;
-    padding: 10rem;
-    text-align: center;
-    border-bottom: 1px solid #333;
-  }
-  
-  .filtros {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 2rem;
-    padding: 0 2rem;
-  }
-  
-  .filtro-btn,
-  .caracteristicas-btn {
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    font-weight: 800;
-    border: 3px solid white;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 12px;
-  }
-  
-  .filtro-btn:hover,
-  .caracteristicas-btn:hover {
-    background-color: white;
-    color: #000;
-  }  
-  
-  .descripcion {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .producto-card-wrapper {
-    width: 100%; /* se ajusta al grid */
-    min-height: 480px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .producto-card-wrapper {
-    width: 100%; /* se ajusta al grid */
-    min-height: 480px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }    
-  
-  
-  .producto-imagen-flotante {
-    position: absolute;
-    top: -90px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 160px;
-    height: auto;
-    z-index: 2;
-  }
-  
-  
-  
+
+.producto-card h3 {
+  font-size: 18px;
+  color: #222;
+  margin: 12px 0 4px;
+  text-decoration: none;
+}
+
+.marca {
+  font-size: 14px;
+  color: gray;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+}
+
+.precio-actual {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+
+/* VIDEO BANNER */
+.productos-banner-video {
+  position: relative;
+  width: 100%;
+  height: 780px;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.productos-banner-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ENCABEZADO DE COLECCIÓN */
+.coleccion-header {
+  background-color: #000;
+  color: #fff;
+  padding: 6rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid #222;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filtro-btn,
+.caracteristicas-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: 700;
+  padding: 1.7rem 2.4rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filtro-btn:hover,
+.caracteristicas-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.descripcion {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
   
   
   
