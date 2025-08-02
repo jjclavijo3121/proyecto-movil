@@ -1,51 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import productos from '../../data/DataProductos.js';
 import './CardDetails.css';
 
 const CardDetails = () => {
-  const { id } = useParams(); // ID desde la URL
-  const producto = productos.find((p) => p.id === Number(id)); // Buscar el producto correspondiente
+  const { id } = useParams();
+  const producto = productos.find((p) => p.id === Number(id));
 
-  // Validación por si no se encuentra el producto
+  const [imagenSeleccionada, setImagenSeleccionada] = useState(producto?.imagenPrincipal || producto?.imagenes[0]);
+
   if (!producto) {
     return <div style={{ padding: '2rem' }}>Producto no encontrado.</div>;
   }
 
   return (
-    <div className="detalle-container">
-      <div className="imagenes">
-        <div className="miniaturas">
-        {producto.imagenes?.map((img, idx) => (
-          <img key={idx} src={img} alt={`miniatura-${idx}`} className="miniatura" />
+    <div className="card-details-container">
+      <div className="image-gallery">
+        {producto.imagenes.map((img, idx) => (
+          <img
+            key={idx}
+            src={img}
+            alt={`miniatura-${idx}`}
+            onClick={() => setImagenSeleccionada(img)}
+            className="miniatura"
+          />
         ))}
-        </div>
-        <img src={producto.imagenPrincipal || producto.imagenes[0]} alt={producto.nombre} className="imagen-principal" />
       </div>
 
-      <div className="info-producto">
-        <span className="marca">{producto.marca}</span>
-        <h1>{producto.nombre}</h1>
-        <div className="precios">
-          <span className="precio-original">${producto.precioOriginal.toLocaleString()}</span>
-          <span className="precio-descuento">${producto.precioActual.toLocaleString()}</span>
+      <div className="main-image">
+        <img src={imagenSeleccionada} alt={producto.nombre} />
+      </div>
+
+      <div className="product-info">
+        <div className="product-brand">{producto.marca}</div>
+        <div className="product-title">{producto.nombre}</div>
+
+        <div className="price-section">
+          <div className="old-price">${producto.precioOriginal.toLocaleString()}</div>
+          <div className="new-price">${producto.precioActual.toLocaleString()}</div>
         </div>
+
         <p className="info-envio">Impuesto incluido. Los gastos de envío se calculan en la pantalla de pagos.</p>
 
-        <div className="colores">
+        <div className="product-color">
           <p>COLOR</p>
-          <div className="color-options">
-            {producto.colores.map((color, idx) => (
-              <button key={idx} className="color-btn">{color.toUpperCase()}</button>
-            ))}
-          </div>
+          {producto.colores.map((color, idx) => (
+            <button key={idx} className="color-option">{color.toUpperCase()}</button>
+          ))}
         </div>
 
-        <p className="envio">📦 Envío para toda Colombia.</p>
-        <button className="comparar-btn">Añadir a comparar</button>
+        <div className="shipping-info">
+          <i className="fa fa-truck"></i> Envío para toda Colombia.
+        </div>
+
+        <div className="buttons">
+          <button>Añadir a comparar</button>
+          <button>Agregar al carrito</button>
+        </div>
       </div>
     </div>
   );
 };
 
 export default CardDetails;
+

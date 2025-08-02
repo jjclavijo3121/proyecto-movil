@@ -7,6 +7,14 @@ html, body {
   overflow-x: hidden;
 }
 
+/* index.css o App.css */
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 
 body {
     font-family: system-ui, sans-serif;

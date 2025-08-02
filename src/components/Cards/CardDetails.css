@@ -1,121 +1,131 @@
-.detalle-container {
-    display: flex;
-    padding: 15.5rem;
-    gap: 3rem;
-    flex: 1;
-    color: #fff;
-    background-color: #121212;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .imagenes {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .miniaturas {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .miniatura {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .imagen-principal {
-    width: 300px;
-    height: auto;
-    object-fit: contain;
-  }
-  
-  .info-producto {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .marca {
-    color: #ccc;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0.5rem 0 1rem;
-  }
-  
-  .precios {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-  }
-  
-  .precio-original {
-    text-decoration: line-through;
-    color: #999;
-    font-size: 1rem;
-  }
-  
-  .precio-descuento {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #35ff75;
-  }
-  
-  .info-envio {
-    font-size: 0.9rem;
-    margin: 0.5rem 0 1rem;
-    opacity: 0.8;
-  }
-  
-  .colores {
-    margin-top: 1rem;
-  }
-  
-  .color-options {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-top: 0.5rem;
-  }
-  
-  .color-btn {
-    background: transparent;
-    border: 1px solid #aaa;
-    color: #fff;
-    padding: 0.4rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .color-btn:hover {
-    background: #333;
-  }
-  
-  .envio {
-    margin-top: 1.5rem;
-  }
-  
-  .comparar-btn {
-    margin-top: 2rem;
-    background: #fff;
-    color: #000;
-    padding: 0.8rem 1.5rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .comparar-btn:hover {
-    background: #ddd;
-  }
-  
+/* CardDetails.css */
+
+.card-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* centra verticalmente */
+  min-height: calc(100vh - 90px - 60px); /* altura total menos navbar y footer */
+  background-color: #000;
+  color: #fff;
+  padding: 60px 190px;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.image-gallery img {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.2s;
+}
+
+.image-gallery img:hover {
+  border: 2px solid #fff;
+}
+
+.main-image img {
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-brand {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.price-section {
+  margin-bottom: 20px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 18px;
+}
+
+.new-price {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.product-color {
+  margin: 20px 0;
+}
+
+.color-option {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 24px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.color-option:hover {
+  background: white;
+  color: black;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.buttons button {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 15px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buttons button:hover {
+  background: #ddd;
+}
+
+.shipping-info {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.shipping-info i {
+  margin-right: 8px;
+}

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Navbar.css';
 import { FiSearch, FiShoppingCart } from 'react-icons/fi';
-import { Link } from 'react-router-dom'; // <-- Import necesario
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
@@ -34,9 +34,19 @@ const Navbar = () => {
         <div className="navbar-logo">Logo</div>
         <ul className="navbar-links">
           <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/productos">Productos</Link></li>
+
+          <li className="dropdown">
+            <span className="navbar-link">Productos</span>
+            <ul className="dropdown-menu">
+              <li><Link to="/productos" className="navbar-link">Apple</Link></li>
+              <li><span className="navbar-link disabled">Samsung</span></li>
+              <li><span className="navbar-link disabled">Accesorios</span></li>
+            </ul>
+          </li>
+
           <li><Link to="/quienes-somos">Quienes Somos</Link></li>
         </ul>
+
         <div className="navbar-icons">
           <div className="search-animated-container">
             {showSearch && (

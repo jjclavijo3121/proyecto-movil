@@ -2,7 +2,7 @@
   border-color: aqua;
   min-height: 78vh;
   width: 100vw;
-  background: #fdfdfd;
+  background: #eeeeee;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,11 +16,12 @@
   margin-top: 2.5rem; /* Puedes ajustar el valor según lo que necesites */
   font-size: 2.2rem;
   text-align: center;
+  color: #000;
 }
 
 .body-background p {
   height: auto;
-
+  color: #eeeeee;
 }
 
 
