@@ -117,13 +117,16 @@
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  min-width: 180px;
+  min-width: 120px;
+  text-align: center;
   padding: 0;
+  width: 100%; /* Asegura que el menú tenga el mismo ancho que el botón */
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
 
 .dropdown-menu li {
   list-style: none;
@@ -156,3 +159,5 @@
   cursor: default;
   pointer-events: none;
 }
+
+

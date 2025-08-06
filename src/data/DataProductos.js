@@ -15,15 +15,15 @@ const productos = [
     colores: ['Blanco', 'Amarillo', 'Rosado'],
     descripcion: 'El iPhone 12 Pro Max ofrece una experiencia profesional con su potente chip A14 Bionic, cámara triple y pantalla Super Retina XDR de 6.7 pulgadas.',
     especificaciones: [
-      { campo: 'Pantalla', valor: '6.1” 1170 x 2532 píxeles' },
+      { campo: 'Pantalla', valor: '6.7” 1284 x 2778 píxeles' },
       { campo: 'Procesador', valor: 'Apple A14 Bionic' },
       { campo: 'Almacenamiento', valor: '256GB' },
       { campo: 'Expansión', valor: 'Sin micro SD' },
-      { campo: 'Cámara', valor: 'Cuádruple 12MP + 12MP + 12MP + LÍDAR' },
-      { campo: 'Batería', valor: '2815 mAh' },
-      { campo: 'IOS', valor: 'IOS 16' },
+      { campo: 'Cámara', valor: 'Triple 12MP + 12MP + 12MP + LÍDAR' },
+      { campo: 'Batería', valor: '3687 mAh' },
+      { campo: 'IOS', valor: 'iOS 16' },
       { campo: 'Perfil', valor: '7.4 mm' },
-      { campo: 'Peso', valor: '189 g' },
+      { campo: 'Peso', valor: '228 g' },
     ]
   },
   {
@@ -40,7 +40,18 @@ const productos = [
     precioOriginal: 3999990,
     precioActual: 2949990,
     colores: ['Blanco', 'Amarillo', 'Rosado'],
-    descripcion: 'El iPhone 14 Pro Max cuenta con la nueva Dynamic Island, chip A16 Bionic y un sistema de cámaras avanzadas para fotografía profesional.'
+    descripcion: 'El iPhone 14 Pro Max cuenta con la nueva Dynamic Island, chip A16 Bionic y un sistema de cámaras avanzadas para fotografía profesional.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.7” 1290 x 2796 píxeles' },
+      { campo: 'Procesador', valor: 'Apple A16 Bionic' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sin micro SD' },
+      { campo: 'Cámara', valor: 'Triple 48MP + 12MP + 12MP' },
+      { campo: 'Batería', valor: '4323 mAh' },
+      { campo: 'IOS', valor: 'iOS 16' },
+      { campo: 'Perfil', valor: '7.85 mm' },
+      { campo: 'Peso', valor: '240 g' },
+    ]
   },
   {
     id: 3,
@@ -56,7 +67,18 @@ const productos = [
     precioOriginal: 3399990,
     precioActual: 2699990,
     colores: ['Blanco', 'Amarillo', 'Rosado'],
-    descripcion: 'El iPad Mini 7ª generación es compacto y potente, ideal para estudiar, trabajar y disfrutar multimedia gracias a su chip A15 Bionic.'
+    descripcion: 'El iPad Mini 7ª generación es compacto y potente, ideal para estudiar, trabajar y disfrutar multimedia gracias a su chip A15 Bionic.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '8.3” 1488 x 2266 píxeles' },
+      { campo: 'Procesador', valor: 'Apple A15 Bionic' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sin micro SD' },
+      { campo: 'Cámara', valor: 'Principal 12MP / Frontal 12MP' },
+      { campo: 'Batería', valor: '5124 mAh' },
+      { campo: 'IOS', valor: 'iPadOS 17' },
+      { campo: 'Perfil', valor: '6.3 mm' },
+      { campo: 'Peso', valor: '293 g' },
+    ]
   },
   {
     id: 4,
@@ -72,7 +94,18 @@ const productos = [
     precioOriginal: 3299000,
     precioActual: 2990000,
     colores: ['Blanco', 'Amarillo', 'Rosado'],
-    descripcion: 'El iPhone 13 mejora en cámara, rendimiento y batería con su chip A15 Bionic y sistema de doble cámara avanzado.'
+    descripcion: 'El iPhone 13 mejora en cámara, rendimiento y batería con su chip A15 Bionic y sistema de doble cámara avanzado.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.1” 1170 x 2532 píxeles' },
+      { campo: 'Procesador', valor: 'Apple A15 Bionic' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sin micro SD' },
+      { campo: 'Cámara', valor: 'Dual 12MP + 12MP' },
+      { campo: 'Batería', valor: '3240 mAh' },
+      { campo: 'IOS', valor: 'iOS 16' },
+      { campo: 'Perfil', valor: '7.7 mm' },
+      { campo: 'Peso', valor: '174 g' },
+    ]
   },
   {
     id: 5,
@@ -88,7 +121,18 @@ const productos = [
     precioOriginal: 1990000,
     precioActual: 1390000,
     colores: ['Blanco', 'Amarillo', 'Rosado'],
-    descripcion: 'El iPhone 11 ofrece una gran relación calidad-precio con su chip A13 Bionic y sistema de cámara dual con Modo Noche.'
+    descripcion: 'El iPhone 11 ofrece una gran relación calidad-precio con su chip A13 Bionic y sistema de cámara dual con Modo Noche.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.1” 828 x 1792 píxeles' },
+      { campo: 'Procesador', valor: 'Apple A13 Bionic' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sin micro SD' },
+      { campo: 'Cámara', valor: 'Dual 12MP + 12MP' },
+      { campo: 'Batería', valor: '3110 mAh' },
+      { campo: 'IOS', valor: 'iOS 16' },
+      { campo: 'Perfil', valor: '8.3 mm' },
+      { campo: 'Peso', valor: '194 g' },
+    ]
   },
   {
     id: 6,
@@ -104,7 +148,18 @@ const productos = [
     precioOriginal: 2390000,
     precioActual: 1890000,
     colores: ['Blanco', 'Amarillo', 'Rosado'],
-    descripcion: 'El iPhone 12 destaca por su diseño elegante, pantalla OLED Super Retina y compatibilidad con 5G.'
+    descripcion: 'El iPhone 12 destaca por su diseño elegante, pantalla OLED Super Retina y compatibilidad con 5G.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.1” 1170 x 2532 píxeles' },
+      { campo: 'Procesador', valor: 'Apple A14 Bionic' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sin micro SD' },
+      { campo: 'Cámara', valor: 'Dual 12MP + 12MP' },
+      { campo: 'Batería', valor: '2815 mAh' },
+      { campo: 'IOS', valor: 'iOS 16' },
+      { campo: 'Perfil', valor: '7.4 mm' },
+      { campo: 'Peso', valor: '164 g' },
+    ]
   },
   {
     id: 7,
@@ -120,7 +175,18 @@ const productos = [
     precioOriginal: 2390000,
     precioActual: 1890000,
     colores: ['Blanco', 'Amarillo', 'Rosado'],
-    descripcion: 'Con un rendimiento equilibrado y diseño moderno, este iPhone 12 es ideal para el día a día y contenido multimedia.'
+    descripcion: 'Con un rendimiento equilibrado y diseño moderno, este iPhone 12 es ideal para el día a día y contenido multimedia.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.1” 1170 x 2532 píxeles' },
+      { campo: 'Procesador', valor: 'Apple A14 Bionic' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sin micro SD' },
+      { campo: 'Cámara', valor: 'Dual 12MP + 12MP' },
+      { campo: 'Batería', valor: '2815 mAh' },
+      { campo: 'IOS', valor: 'iOS 16' },
+      { campo: 'Perfil', valor: '7.4 mm' },
+      { campo: 'Peso', valor: '164 g' },
+    ]
   },
   {
     id: 8,
@@ -136,8 +202,237 @@ const productos = [
     precioOriginal: 2390000,
     precioActual: 1890000,
     colores: ['Blanco', 'Amarillo', 'Rosado'],
-    descripcion: 'Otra versión del iPhone 12, perfecta para quienes buscan un equipo moderno, potente y de excelente calidad.'
+    descripcion: 'Otra versión del iPhone 12, perfecta para quienes buscan un equipo moderno, potente y de excelente calidad.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.1” 1170 x 2532 píxeles' },
+      { campo: 'Procesador', valor: 'Apple A14 Bionic' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sin micro SD' },
+      { campo: 'Cámara', valor: 'Dual 12MP + 12MP' },
+      { campo: 'Batería', valor: '2815 mAh' },
+      { campo: 'IOS', valor: 'iOS 16' },
+      { campo: 'Perfil', valor: '7.4 mm' },
+      { campo: 'Peso', valor: '164 g' },
+    ]
   },
+  
+  // Cards Samsung...
+
+  {
+    id: 9,
+    nombre: 'Samsung Galaxy S22 Ultra 256GB',
+    marca: 'SAMSUNG',
+    imagenPrincipal: '/galaxyS22.png',
+    imagenes: [
+      '/imagenes/s22ultra-negro.png',
+      '/imagenes/s22ultra-verde.png',
+      '/imagenes/s22ultra-rojo.png',
+      '/imagenes/s22ultra-blanco.png',
+    ],
+    precioOriginal: 4999000,
+    precioActual: 3799000,
+    colores: ['Negro', 'Verde', 'Rojo'],
+    descripcion: 'El Galaxy S22 Ultra combina un diseño sofisticado con una cámara de 108MP, pantalla AMOLED y S Pen integrado.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.8” 1440 x 3088 píxeles' },
+      { campo: 'Procesador', valor: 'Snapdragon 8 Gen 1' },
+      { campo: 'Almacenamiento', valor: '256GB' },
+      { campo: 'Expansión', valor: 'Sin micro SD' },
+      { campo: 'Cámara', valor: '108MP + 10MP + 10MP + 12MP' },
+      { campo: 'Batería', valor: '5000 mAh' },
+      { campo: 'Android', valor: 'Android 13' },
+      { campo: 'Perfil', valor: '8.9 mm' },
+      { campo: 'Peso', valor: '228 g' },
+    ]
+  },
+  {
+    id: 10,
+    nombre: 'Samsung Galaxy S21 FE 128GB',
+    marca: 'SAMSUNG',
+    imagenPrincipal: '/galaxyS21FE.png',
+    imagenes: [
+      '/imagenes/s21fe-lavanda.png',
+      '/imagenes/s21fe-oliva.png',
+      '/imagenes/s21fe-grafito.png',
+      '/imagenes/s21fe-blanco.png',
+    ],
+    precioOriginal: 2999000,
+    precioActual: 2099000,
+    colores: ['Lavanda', 'Oliva', 'Grafito'],
+    descripcion: 'El Galaxy S21 FE ofrece un rendimiento increíble con pantalla AMOLED 120Hz y cámaras versátiles a un gran precio.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.4” 1080 x 2400 píxeles' },
+      { campo: 'Procesador', valor: 'Snapdragon 888' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sin micro SD' },
+      { campo: 'Cámara', valor: 'Triple 12MP + 8MP + 12MP' },
+      { campo: 'Batería', valor: '4500 mAh' },
+      { campo: 'Android', valor: 'Android 13' },
+      { campo: 'Perfil', valor: '7.9 mm' },
+      { campo: 'Peso', valor: '177 g' },
+    ]
+  },
+  {
+    id: 11,
+    nombre: 'Samsung Galaxy A54 5G 128GB',
+    marca: 'SAMSUNG',
+    imagenPrincipal: '/galaxyA54.png',
+    imagenes: [
+      '/imagenes/a54-negro.png',
+      '/imagenes/a54-lima.png',
+      '/imagenes/a54-blanco.png',
+      '/imagenes/a54-violeta.png',
+    ],
+    precioOriginal: 1799000,
+    precioActual: 1399000,
+    colores: ['Negro', 'Lima', 'Violeta'],
+    descripcion: 'El Galaxy A54 ofrece una pantalla fluida, cámara avanzada y conectividad 5G a un precio accesible.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.4” 1080 x 2340 píxeles' },
+      { campo: 'Procesador', valor: 'Exynos 1380' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sí, hasta 1TB' },
+      { campo: 'Cámara', valor: 'Triple 50MP + 12MP + 5MP' },
+      { campo: 'Batería', valor: '5000 mAh' },
+      { campo: 'Android', valor: 'Android 13' },
+      { campo: 'Perfil', valor: '8.2 mm' },
+      { campo: 'Peso', valor: '202 g' },
+    ]
+  },
+  {
+    id: 12,
+    nombre: 'Samsung Galaxy Z Flip 5 256GB',
+    marca: 'SAMSUNG',
+    imagenPrincipal: '/zflip5.png',
+    imagenes: [
+      '/imagenes/zflip5-negro.png',
+      '/imagenes/zflip5-verde.png',
+      '/imagenes/zflip5-rosado.png',
+      '/imagenes/zflip5-gris.png',
+    ],
+    precioOriginal: 5999000,
+    precioActual: 4699000,
+    colores: ['Negro', 'Verde', 'Rosado'],
+    descripcion: 'Diseño plegable elegante, potente Snapdragon 8 Gen 2 y pantalla exterior útil en el Galaxy Z Flip 5.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.7” 1080 x 2640 píxeles (principal)' },
+      { campo: 'Procesador', valor: 'Snapdragon 8 Gen 2' },
+      { campo: 'Almacenamiento', valor: '256GB' },
+      { campo: 'Expansión', valor: 'Sin micro SD' },
+      { campo: 'Cámara', valor: 'Dual 12MP + 12MP' },
+      { campo: 'Batería', valor: '3700 mAh' },
+      { campo: 'Android', valor: 'Android 13' },
+      { campo: 'Perfil', valor: '6.9 mm (cerrado)' },
+      { campo: 'Peso', valor: '187 g' },
+    ]
+  },
+  {
+    id: 13,
+    nombre: 'Samsung Galaxy A34 5G 128GB',
+    marca: 'SAMSUNG',
+    imagenPrincipal: '/a34.png',
+    imagenes: [
+      '/imagenes/a34-negro.png',
+      '/imagenes/a34-verde.png',
+      '/imagenes/a34-plateado.png',
+      '/imagenes/a34-violeta.png',
+    ],
+    precioOriginal: 1499000,
+    precioActual: 1199000,
+    colores: ['Negro', 'Verde', 'Plateado'],
+    descripcion: 'El Galaxy A34 ofrece una gran relación calidad-precio con cámara triple, 5G y batería duradera.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.6” 1080 x 2340 píxeles' },
+      { campo: 'Procesador', valor: 'MediaTek Dimensity 1080' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sí, hasta 1TB' },
+      { campo: 'Cámara', valor: 'Triple 48MP + 8MP + 5MP' },
+      { campo: 'Batería', valor: '5000 mAh' },
+      { campo: 'Android', valor: 'Android 13' },
+      { campo: 'Perfil', valor: '8.2 mm' },
+      { campo: 'Peso', valor: '199 g' },
+    ]
+  },
+  {
+    id: 14,
+    nombre: 'Samsung Galaxy M14 5G 128GB',
+    marca: 'SAMSUNG',
+    imagenPrincipal: '/m14.png',
+    imagenes: [
+      '/imagenes/m14-azul.png',
+      '/imagenes/m14-plateado.png',
+      '/imagenes/m14-verde.png',
+    ],
+    precioOriginal: 899000,
+    precioActual: 749000,
+    colores: ['Azul', 'Plateado', 'Verde'],
+    descripcion: 'Galaxy M14 ofrece conectividad 5G y una enorme batería de 6000 mAh para duración extendida.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.6” 1080 x 2408 píxeles' },
+      { campo: 'Procesador', valor: 'Exynos 1330' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sí, hasta 1TB' },
+      { campo: 'Cámara', valor: 'Triple 50MP + 2MP + 2MP' },
+      { campo: 'Batería', valor: '6000 mAh' },
+      { campo: 'Android', valor: 'Android 13' },
+      { campo: 'Perfil', valor: '9.4 mm' },
+      { campo: 'Peso', valor: '206 g' },
+    ]
+  },
+  {
+    id: 15,
+    nombre: 'Samsung Galaxy A15 128GB',
+    marca: 'SAMSUNG',
+    imagenPrincipal: '/a15.png',
+    imagenes: [
+      '/imagenes/a15-negro.png',
+      '/imagenes/a15-azul.png',
+      '/imagenes/a15-verde.png',
+    ],
+    precioOriginal: 899000,
+    precioActual: 699000,
+    colores: ['Negro', 'Azul', 'Verde'],
+    descripcion: 'Galaxy A15 es un equipo confiable y económico con buena pantalla y cámara triple.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '6.5” 1080 x 2340 píxeles' },
+      { campo: 'Procesador', valor: 'MediaTek Helio G99' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sí, hasta 1TB' },
+      { campo: 'Cámara', valor: 'Triple 50MP + 5MP + 2MP' },
+      { campo: 'Batería', valor: '5000 mAh' },
+      { campo: 'Android', valor: 'Android 14' },
+      { campo: 'Perfil', valor: '8.4 mm' },
+      { campo: 'Peso', valor: '200 g' },
+    ]
+  },
+  {
+    id: 16,
+    nombre: 'Samsung Galaxy Tab S6 Lite 128GB',
+    marca: 'SAMSUNG',
+    imagenPrincipal: '/tabs6lite.png',
+    imagenes: [
+      '/imagenes/tabs6lite-gris.png',
+      '/imagenes/tabs6lite-rosa.png',
+      '/imagenes/tabs6lite-azul.png',
+    ],
+    precioOriginal: 1899000,
+    precioActual: 1499000,
+    colores: ['Gris', 'Rosa', 'Azul'],
+    descripcion: 'Tableta versátil para productividad y entretenimiento, con S Pen incluido y gran pantalla.',
+    especificaciones: [
+      { campo: 'Pantalla', valor: '10.4” 1200 x 2000 píxeles' },
+      { campo: 'Procesador', valor: 'Snapdragon 720G' },
+      { campo: 'Almacenamiento', valor: '128GB' },
+      { campo: 'Expansión', valor: 'Sí, hasta 1TB' },
+      { campo: 'Cámara', valor: 'Principal 8MP / Frontal 5MP' },
+      { campo: 'Batería', valor: '7040 mAh' },
+      { campo: 'Android', valor: 'Android 13' },
+      { campo: 'Perfil', valor: '7.0 mm' },
+      { campo: 'Peso', valor: '467 g' },
+    ]
+  },
+  
+
 ];
 
 export default productos;

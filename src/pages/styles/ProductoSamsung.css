@@ -1,0 +1,134 @@
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    padding: 90px 220px;
+    background-color: #eeeeee;
+  }
+  
+  .producto-card-wrapper {
+    width: 640px;
+    max-width: 300px;
+  }
+  
+  .producto-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  
+  .producto-card-link * {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+  
+  .producto-card {
+    height: 430px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .producto-card:hover {
+    transform: translateY(-12px);
+  }
+  
+  .producto-imagen-ajustada {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+  
+  .producto-card h3 {
+    font-size: 18px;
+    color: #222;
+    margin: 12px 0 4px;
+    text-decoration: none;
+  }
+  
+  .marca {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .precio-original {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+  }
+  
+  .precio-actual {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 12px;
+  }
+  
+  /* IMAGEN BANNER */
+.productos-banner-imagen {
+    position: relative;
+    width: 100%;
+    height: 855px;
+    overflow: hidden;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .productos-banner-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%; /* ↓ Esto baja el enfoque de la imagen */
+  }
+  
+  /* ENCABEZADO DE COLECCIÓN */
+  .coleccion-header {
+    background-color: #242424;
+    color: #fff;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-bottom: 2px solid #222;
+  }
+  
+  .filtros {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .filtro-btn,
+  .caracteristicas-btn {
+    background: transparent;
+    border: 2.5px solid white;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 1.7rem 2.4rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filtro-btn:hover,
+  .caracteristicas-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .descripcion {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  

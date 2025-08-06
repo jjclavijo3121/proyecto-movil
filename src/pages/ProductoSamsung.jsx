@@ -1,23 +1,20 @@
 import React from 'react';
-import './styles/Productos.css';
-import { Link } from 'react-router-dom'; 
+import './styles/ProductoSamsung.css';
+import { Link } from 'react-router-dom';
 import productos from "../data/DataProductos.js";
 
-const Productos = () => {
-  // 🔵 Solo productos de la marca Apple
-  const appleProducts = productos.filter(prod => prod.marca.toLowerCase() === 'apple');
+const ProductoSamsung = () => {
+  const samsungProducts = productos.filter(prod => prod.marca.toLowerCase() === 'samsung');
 
   return (
     <>
       {/* Banner de video */}
-      <div className="productos-banner-video">
-        <video autoPlay muted loop playsInline>
-          <source src="/banner_video.mp4" type="video/mp4" />
-          Tu navegador no soporta este video.
-        </video>
+      <div className="productos-banner-imagen">
+        <img src="/fondo-samsung.png" alt="Banner Samsung" className="banner-img" />
       </div>
 
-      <div className="coleccion-contenedor"> 
+
+      <div className="coleccion-contenedor">
         {/* Título y filtros */}
         <div className="coleccion-header">
           <div className="filtros">
@@ -32,15 +29,15 @@ const Productos = () => {
           </div>
 
           <p className="descripcion">
-            Prepárate para ser envuelto en un mundo de elegancia tecnológica con <strong>"Tech Elegance: La Colección Apple"</strong>.<br />
-            Descubre cómo cada producto transforma tu día a día, permitiéndole alcanzar nuevos horizontes y desbloquear todo tu potencial en un estilo sin igual. Bienvenido a la excelencia Apple.
+            Descubre el futuro en tus manos con la <strong>"Colección Samsung Galaxy"</strong>.<br />
+            Disfruta de innovación, potencia y estilo con dispositivos que te conectan con lo que realmente importa. Bienvenido al universo Samsung.
           </p>
         </div>
       </div>
 
       <div className="productos-wrapper">
         <div className="productos-container">
-          {appleProducts.map((prod) => (
+          {samsungProducts.map((prod) => (
             <Link to={`/producto/${prod.id}`} key={prod.id} className="producto-card-link">
               <div className="producto-card-wrapper">
                 <div className="producto-card">
@@ -63,4 +60,4 @@ const Productos = () => {
   );
 };
 
-export default Productos;
+export default ProductoSamsung;

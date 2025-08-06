@@ -39,7 +39,7 @@ const Navbar = () => {
             <span className="navbar-link">Productos</span>
             <ul className="dropdown-menu">
               <li><Link to="/productos" className="navbar-link">Apple</Link></li>
-              <li><span className="navbar-link disabled">Samsung</span></li>
+              <li><Link to="/samsung" className="navbar-link">Samsung</Link></li>
               <li><span className="navbar-link disabled">Accesorios</span></li>
             </ul>
           </li>
