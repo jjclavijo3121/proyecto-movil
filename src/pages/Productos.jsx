@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles/Productos.css';
 import { Link } from 'react-router-dom'; 
 import productos from "../data/DataProductos.js";
 
 const Productos = () => {
+  // 🔵 Scroll al inicio al cargar la página
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // 🔵 Solo productos de la marca Apple
   const appleProducts = productos.filter(prod => prod.marca.toLowerCase() === 'apple');
 

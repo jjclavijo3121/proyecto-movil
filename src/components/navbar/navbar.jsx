@@ -32,8 +32,9 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">Logo</div>
+
         <ul className="navbar-links">
-          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/" className="navbar-link">Inicio</Link></li>
 
           <li className="dropdown">
             <span className="navbar-link">Productos</span>
@@ -44,7 +45,7 @@ const Navbar = () => {
             </ul>
           </li>
 
-          <li><Link to="/quienes-somos">Quienes Somos</Link></li>
+          <li><Link to="/quienes-somos" className="navbar-link">Quienes Somos</Link></li>
         </ul>
 
         <div className="navbar-icons">

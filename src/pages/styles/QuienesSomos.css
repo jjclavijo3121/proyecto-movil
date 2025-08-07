@@ -1,6 +1,142 @@
+.quienes-banner-imagen {
+  position: relative;
+  width: 100%;
+  height: 855px;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quienes-banner-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+}
+
+/* Texto encima de la imagen */
+.quienes-titulo-banner {
+  position: absolute;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  text-align: center;
+}
+
 .quienes-container {
-    padding: 2rem;
-    background-color: #eeeeee;
-    min-height: 70vh;
-  }
-  
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.quienes-container p {
+  font-size: 1.25rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sección de 3 tarjetas debajo del banner */
+.quienes-tarjetas-seccion {
+  background-color: #eeeeee;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.quienes-tarjeta {
+  background-color: white;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.quienes-tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.quienes-tarjeta img {
+  width: 100%;
+  height: auto;
+  max-height: 230px;
+  object-fit: contain;
+  margin-bottom: 1.5rem;
+}
+
+.quienes-tarjeta h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.quienes-tarjeta p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Sección de historia */
+.quienes-historia {
+  background-color: #eeeeee;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.quienes-historia h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.quienes-historia p {
+  font-size: 1.4rem;
+  color: #444;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.quienes-productos-seccion {
+  background-color: #eeeeee;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.quienes-productos-seccion h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: -2.3rem;
+}
+
+.quienes-vermas-btn-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.quienes-vermas-btn {
+  background-color: #000;
+  color: white;
+  padding: 20px 40px;         /* Tamaño grande */
+  font-size: 1.2rem;          /* Texto más grande */
+  text-decoration: none;
+  border-radius: 999px;       /* Redondeado completo */
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.quienes-vermas-btn:hover {
+  background-color: #444;
+  transform: scale(1.05); /* Efecto de zoom */
+}
+
