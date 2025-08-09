@@ -1,6 +1,5 @@
 .card-details-container {
   background-color: #eeeeee;
-  background-image: url('/public/fondo.jpg'); /* <-- Cambia esto por tu imagen */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

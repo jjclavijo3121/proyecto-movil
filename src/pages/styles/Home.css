@@ -79,7 +79,6 @@
   flex-wrap: wrap;
 }
 
-
 .boton-azul {
   font-size: 17px;
   line-height: 1.17648;
@@ -126,5 +125,135 @@
 .boton-borde:hover {
   background-color: #c1c1c1;
 }
+
+.home-banner-imagen {
+  position: relative;
+  background-color: black;
+  padding: 0px 0px 110px 0px; /* Aumenté el espacio inferior */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-banner-imagen img {
+  width: 1200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.seccion-intermedia-texto {
+  background-color: #242424;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.intermedio-titulo {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+
+.boton-vermas-contenedor {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0; /* Espaciado arriba y abajo del botón */
+}
+
+.seccion-iphone16 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem 1rem 1rem; /* Top, Right, Bottom, Left */
+}
+
+
+.iphone16-titulo {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.iphone16-subtitulo {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Banner Samsung */
+.samsung-banner-container {
+  width: 100vw;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  position: relative; /* Necesario para posicionar el texto encima */
+}
+
+.samsung-banner-container img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.3);
+}
+
+.samsung-banner-titulo {
+  position: absolute;
+  top: 50%; /* Centrado vertical */
+  left: 50%; /* Centrado horizontal */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.boton-borde-iphone {
+  font-size: 17px;
+  line-height: 1.17648;
+  letter-spacing: -0.022em;
+  font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: 28px;
+  padding: 22px 25px;
+  border-radius: 980px;
+  font-weight: 700;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: white;
+  color: #242424;
+  border: 1px solid #242424;
+  margin-top: 10px; /* espacio entre imagen y botón */
+}
+
+.boton-borde-iphone:hover {
+  background-color: #c1c1c1;
+}
+
+/* Centrar contenido del banner */
+.home-banner-imagen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
