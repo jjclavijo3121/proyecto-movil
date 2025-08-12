@@ -431,6 +431,192 @@ const productos = [
       { campo: 'Peso', valor: '467 g' },
     ]
   },
+
+  // Accesorios
+  
+  {
+    id: 17,
+    nombre: 'Apple AirPods Pro (2da Generación)',
+    marca: 'Accesorios',
+    imagenPrincipal: '/airpodspro2.png',
+    imagenes: [
+      '/imagenes/airpodspro2-frontal.png',
+      '/imagenes/airpodspro2-lateral.png',
+      '/imagenes/airpodspro2-estuche.png',
+    ],
+    precioOriginal: 1299000,
+    precioActual: 1099000,
+    colores: ['Blanco'],
+    descripcion: 'Auriculares inalámbricos con cancelación activa de ruido, modo transparencia y audio espacial.',
+    especificaciones: [
+      { campo: 'Conectividad', valor: 'Bluetooth 5.3' },
+      { campo: 'Cancelación de ruido', valor: 'Sí, activa' },
+      { campo: 'Micrófonos', valor: 'Dos con formación de haz' },
+      { campo: 'Resistencia', valor: 'IPX4' },
+      { campo: 'Autonomía', valor: '6 horas (30h con estuche)' },
+      { campo: 'Compatibilidad', valor: 'iOS y macOS' },
+      { campo: 'Carga', valor: 'Lightning / MagSafe' },
+      { campo: 'Peso', valor: '5.4 g cada uno' },
+    ]
+  },
+  {
+    id: 18,
+    nombre: 'Apple AirPods (3ra Generación)',
+    marca: 'Accesorios',
+    imagenPrincipal: '/airpods3.png',
+    imagenes: [
+      '/imagenes/airpods3-frontal.png',
+      '/imagenes/airpods3-lateral.png',
+      '/imagenes/airpods3-estuche.png',
+    ],
+    precioOriginal: 999000,
+    precioActual: 849000,
+    colores: ['Blanco'],
+    descripcion: 'Auriculares con audio espacial, ecualización adaptativa y resistencia al sudor y agua.',
+    especificaciones: [
+      { campo: 'Conectividad', valor: 'Bluetooth 5.0' },
+      { campo: 'Audio espacial', valor: 'Sí, con seguimiento dinámico' },
+      { campo: 'Resistencia', valor: 'IPX4' },
+      { campo: 'Autonomía', valor: '6 horas (30h con estuche)' },
+      { campo: 'Compatibilidad', valor: 'iOS y macOS' },
+      { campo: 'Carga', valor: 'Lightning / MagSafe' },
+      { campo: 'Peso', valor: '4.28 g cada uno' },
+    ]
+  },
+  {
+    id: 19,
+    nombre: 'Samsung Galaxy Buds2 Pro',
+    marca: 'Accesorios',
+    imagenPrincipal: '/buds2pro.png',
+    imagenes: [
+      '/imagenes/buds2pro-gris.png',
+      '/imagenes/buds2pro-morado.png',
+      '/imagenes/buds2pro-blanco.png',
+    ],
+    precioOriginal: 899000,
+    precioActual: 749000,
+    colores: ['Gris Grafito', 'Morado Bora', 'Blanco'],
+    descripcion: 'Auriculares premium con audio Hi-Fi, cancelación activa de ruido y diseño ergonómico.',
+    especificaciones: [
+      { campo: 'Conectividad', valor: 'Bluetooth 5.3' },
+      { campo: 'Cancelación de ruido', valor: 'ANC de 3 micrófonos' },
+      { campo: 'Resistencia', valor: 'IPX7' },
+      { campo: 'Autonomía', valor: '5 horas (18h con estuche)' },
+      { campo: 'Compatibilidad', valor: 'Android y Windows' },
+      { campo: 'Carga', valor: 'USB-C / Carga inalámbrica' },
+      { campo: 'Peso', valor: '5.5 g cada uno' },
+    ]
+  },
+  {
+    id: 20,
+    nombre: 'Samsung Galaxy Buds FE',
+    marca: 'Accesorios',
+    imagenPrincipal: '/budsfe.png',
+    imagenes: [
+      '/imagenes/budsfe-blanco.png',
+      '/imagenes/budsfe-negro.png',
+    ],
+    precioOriginal: 599000,
+    precioActual: 479000,
+    colores: ['Blanco', 'Negro'],
+    descripcion: 'Auriculares con cancelación de ruido, sonido equilibrado y batería de larga duración.',
+    especificaciones: [
+      { campo: 'Conectividad', valor: 'Bluetooth 5.2' },
+      { campo: 'Cancelación de ruido', valor: 'ANC' },
+      { campo: 'Resistencia', valor: 'IPX2' },
+      { campo: 'Autonomía', valor: '6 horas (21h con estuche)' },
+      { campo: 'Compatibilidad', valor: 'Android y Windows' },
+      { campo: 'Carga', valor: 'USB-C' },
+      { campo: 'Peso', valor: '5.6 g cada uno' },
+    ]
+  },
+  {
+    id: 21,
+    nombre: 'Cargador Apple USB-C 20W',
+    marca: 'Accesorios',
+    imagenPrincipal: '/cargador20w.png',
+    imagenes: [
+      '/imagenes/cargador20w-frontal.png',
+      '/imagenes/cargador20w-lateral.png',
+    ],
+    precioOriginal: 149000,
+    precioActual: 119000,
+    colores: ['Blanco'],
+    descripcion: 'Adaptador de corriente de 20W para carga rápida en dispositivos Apple.',
+    especificaciones: [
+      { campo: 'Potencia', valor: '20W' },
+      { campo: 'Entrada', valor: '100–240V AC' },
+      { campo: 'Salida', valor: 'USB-C PD' },
+      { campo: 'Compatibilidad', valor: 'iPhone, iPad, AirPods' },
+      { campo: 'Dimensiones', valor: '41 × 42 × 26 mm' },
+      { campo: 'Peso', valor: '60 g' },
+    ]
+  },
+  {
+    id: 22,
+    nombre: 'Cargador Samsung USB-C 25W',
+    marca: 'Accesorios',
+    imagenPrincipal: '/cargador25w.png',
+    imagenes: [
+      '/imagenes/cargador25w-frontal.png',
+      '/imagenes/cargador25w-lateral.png',
+    ],
+    precioOriginal: 139000,
+    precioActual: 109000,
+    colores: ['Negro'],
+    descripcion: 'Cargador rápido de 25W compatible con dispositivos Samsung y otros con USB-C.',
+    especificaciones: [
+      { campo: 'Potencia', valor: '25W' },
+      { campo: 'Entrada', valor: '100–240V AC' },
+      { campo: 'Salida', valor: 'USB-C PD' },
+      { campo: 'Compatibilidad', valor: 'Samsung Galaxy, otros USB-C' },
+      { campo: 'Dimensiones', valor: '43 × 45 × 28 mm' },
+      { campo: 'Peso', valor: '65 g' },
+    ]
+  },
+  {
+    id: 23,
+    nombre: 'Cargador Inalámbrico Samsung 15W',
+    marca: 'Accesorios',
+    imagenPrincipal: '/cargadorinalambrico.png',
+    imagenes: [
+      '/imagenes/cargadorinalambrico-frontal.png',
+      '/imagenes/cargadorinalambrico-lateral.png',
+    ],
+    precioOriginal: 229000,
+    precioActual: 179000,
+    colores: ['Negro', 'Blanco'],
+    descripcion: 'Base de carga inalámbrica rápida de 15W para dispositivos compatibles con Qi.',
+    especificaciones: [
+      { campo: 'Potencia', valor: '15W' },
+      { campo: 'Entrada', valor: 'USB-C' },
+      { campo: 'Compatibilidad', valor: 'Dispositivos Qi' },
+      { campo: 'Dimensiones', valor: '91 × 91 × 16 mm' },
+      { campo: 'Peso', valor: '95 g' },
+    ]
+  },
+  {
+    id: 24,
+    nombre: 'Cargador MagSafe Apple',
+    marca: 'Accesorios',
+    imagenPrincipal: '/cargadormagsafe.png',
+    imagenes: [
+      '/imagenes/cargadormagsafe-frontal.png',
+      '/imagenes/cargadormagsafe-lateral.png',
+    ],
+    precioOriginal: 229000,
+    precioActual: 189000,
+    colores: ['Plata'],
+    descripcion: 'Cargador magnético MagSafe con carga inalámbrica de hasta 15W para iPhone.',
+    especificaciones: [
+      { campo: 'Potencia', valor: '15W' },
+      { campo: 'Conector', valor: 'USB-C' },
+      { campo: 'Compatibilidad', valor: 'iPhone 12 y posteriores' },
+      { campo: 'Diámetro', valor: '56 mm' },
+      { campo: 'Peso', valor: '54 g' },
+    ]
+  }
+  
   
 
 ];

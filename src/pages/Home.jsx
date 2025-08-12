@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles/Home.css';
+import { Link } from 'react-router-dom';
 
 const Body = () => {
-
   return (
     <>
       <div className="body-background">
@@ -10,8 +10,12 @@ const Body = () => {
         <p className="inicio-subtitulo">Aquí irá tu contenido...</p>
 
         <div className="inicio-botones">
-          <button className="boton-azul">Más información</button>
-          <button className="boton-borde">Comprar el iPhone</button>
+          <Link to="/quienes-somos">
+            <button className="boton-azul">Quienes Somos</button>
+          </Link>
+          <Link to="/productos">
+            <button className="boton-borde">Comprar iPhone</button>
+          </Link>
         </div>
 
         <img
@@ -27,13 +31,17 @@ const Body = () => {
         <p className="iphone16-subtitulo">
           Más potente, más inteligente, más Apple.
         </p>
-        <button className="boton-borde">Ver más</button>
+        <Link to="/producto/6">
+          <button className="boton-borde">Ver más</button>
+        </Link>
       </div>
 
       {/* Segunda imagen tipo banner con botón debajo */}
       <div className="home-banner-imagen">
-        <img src="/public/iphone16_banner.png" alt="Banner Destacado" />
-        <button className="boton-borde-iphone">Ver todos los modelos</button>
+        <img src="/public/iphone16-home.png" alt="Banner Destacado" />
+        <Link to="/productos">
+          <button className="boton-borde-iphone">Ver todos los modelos</button>
+        </Link>
       </div>
 
       {/* Banner Samsung */}
@@ -41,8 +49,25 @@ const Body = () => {
         <h2 className="samsung-banner-titulo">Colección Samsung</h2>
         <img src="/public/banner_samsung.png" alt="Banner Samsung" />
       </div>
+
+      <div className="body-background-samsung">
+        <h1 className="inicio-titulo-samsung">Bienvenido a la página de Samsung</h1>
+        <p className="inicio-subtitulo-samsung">Aquí irá tu contenido...</p>
+
+        <div className="inicio-botones-samsung">
+          <Link to="/samsung">
+            <button className="boton-borde-samsung">Comprar Samsung</button>
+          </Link>
+        </div>
+        <img
+          className="body-main-image-samsung"
+          src="/public/phone-samsung.png"
+          alt="Imagen principal"
+        />
+      </div>
     </>
   );
 };
 
 export default Body;
+

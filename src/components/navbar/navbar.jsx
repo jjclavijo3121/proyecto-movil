@@ -41,7 +41,7 @@ const Navbar = () => {
             <ul className="dropdown-menu">
               <li><Link to="/productos" className="navbar-link">Apple</Link></li>
               <li><Link to="/samsung" className="navbar-link">Samsung</Link></li>
-              <li><span className="navbar-link disabled">Accesorios</span></li>
+              <li><Link to="/accesorios" className="navbar-link">Accesorios</Link></li>
             </ul>
           </li>
 

@@ -6,6 +6,7 @@ import Productos from './pages/Productos.jsx';
 import QuienesSomos from './pages/QuienesSomos.jsx';
 import CardDetails from './components/Cards/CardDetails.jsx';
 import ProductoSamsung from './pages/ProductoSamsung';
+import Accesorios from './pages/Accesorios.jsx'; // 👈 Importamos la nueva página
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
           <Route index element={<Home />} />
           <Route path="productos" element={<Productos />} />
           <Route path="quienes-somos" element={<QuienesSomos />} />
-          <Route path="/samsung" element={<ProductoSamsung />} />
+          <Route path="samsung" element={<ProductoSamsung />} />
           <Route path="producto/:id" element={<CardDetails />} />
+          <Route path="accesorios" element={<Accesorios />} /> {/* 👈 Nueva ruta */}
         </Route>
       </Routes>
     </BrowserRouter>
@@ -24,6 +26,7 @@ function App() {
 }
 
 export default App;
+
 
 
 

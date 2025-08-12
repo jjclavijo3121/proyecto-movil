@@ -45,14 +45,6 @@
   }
 }
 
-.body-content {
-  flex: 1;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* 🔽 NUEVOS ESTILOS PARA TITULO, SUBTITULO Y BOTONES 🔽 */
 
 .inicio-titulo {
@@ -66,8 +58,8 @@
   font-size: 1.75rem;
   font-weight: 400;
   color: #333;
-  margin-top: 0.5rem;     /* 🔽 Agregado para acercar al título */
-  margin-bottom: 0.5rem;  /* 🔽 Reducido para acercar a los botones */
+  margin-top: 0.5rem;    
+  margin-bottom: 0.5rem;  
   text-align: center;
 }
 
@@ -85,7 +77,7 @@
   letter-spacing: -0.022em;
   font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
   min-width: 28px;
-  padding: 11px 21px;
+  padding: 20px 28px;
   border-radius: 980px;
   font-weight: 600;
   text-align: center;
@@ -128,7 +120,7 @@
 
 .home-banner-imagen {
   position: relative;
-  background-color: black;
+  background-color: #181818;
   padding: 0px 0px 110px 0px; /* Aumenté el espacio inferior */
   display: flex;
   justify-content: center;
@@ -136,34 +128,13 @@
 }
 
 .home-banner-imagen img {
-  width: 1200px;
+  width: 810px;
   height: auto;
   object-fit: contain;
 }
 
-.seccion-intermedia-texto {
-  background-color: #242424;
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.intermedio-titulo {
-  font-size: 35px;
-  font-weight: 700;
-  margin-bottom: 3rem;
-}
-
-
-.boton-vermas-contenedor {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  padding: 2rem 0; /* Espaciado arriba y abajo del botón */
-}
-
 .seccion-iphone16 {
-  background-color: black;
+  background-color: #181818;
   color: white;
   text-align: center;
   padding: 3rem 1rem 1rem 1rem; /* Top, Right, Bottom, Left */
@@ -243,17 +214,77 @@
   align-items: center;
 }
 
+.body-background-samsung {
+  border-color: aqua;
+  min-height: 78vh;
+  width: 100vw;
+  background: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.body-background-samsung h1 {
+  margin-top: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 790;
+  text-align: center;
+  color: #000;
+}
+
+.body-background-samsung p {
+  height: auto;
+  color: #000000;
+}
+
+.inicio-titulo-samsung {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.inicio-subtitulo-samsung { 
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: #333;
+  margin-top: 0.5rem;     /* 🔽 Agregado para acercar al título */
+  margin-bottom: 0.5rem;  /* 🔽 Reducido para acercar a los botones */
+  text-align: center;
+}
+
+.inicio-botones-samsung {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.3rem;     /* 🔽 Reducido para pegarlo al párrafo */
+  flex-wrap: wrap;
+}
 
 
+.boton-borde-samsung {
+  font-size: 17px;
+  line-height: 1.17648;
+  letter-spacing: -0.022em;
+  font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: 28px;
+  padding: 20px 28px;
+  border-radius: 980px;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.boton-borde-samsung:hover {
+  background-color: #c1c1c1;
+}
