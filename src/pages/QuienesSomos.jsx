@@ -31,7 +31,7 @@ const QuienesSomos = () => {
         </div>
 
         <div className="quienes-tarjeta">
-          <img src="/public/como.png" alt="¿Cómo lo haremos?" />
+          <img src="/public/signosdepre.png" alt="¿Cómo lo haremos?" />
           <h2>¿Cómo lo haremos?</h2>
           <p>
             Capacitamos a nuestro personal en atención de servicio en puntos de venta y canales digitales. Garantizamos que nuestros colaboradores y socios se identifiquen con nuestro propósito de marca.

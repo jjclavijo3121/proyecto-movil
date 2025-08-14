@@ -135,32 +135,32 @@ const productos = [
     ]
   },
   {
-    id: 6,
-    nombre: 'iPhone 12 128GB Sim Fisica',
-    marca: 'APPLE',
-    imagenPrincipal: '/iphone12a.png',
-    imagenes: [
-      '/imagenes/iphone12-blanco.png',
-      '/imagenes/iphone12-amarillo.png',
-      '/imagenes/iphone12-rosado.png',
-      '/imagenes/iphone12-verde.png',
-    ],
-    precioOriginal: 2390000,
-    precioActual: 1890000,
-    colores: ['Blanco', 'Amarillo', 'Rosado'],
-    descripcion: 'El iPhone 12 destaca por su diseño elegante, pantalla OLED Super Retina y compatibilidad con 5G.',
-    especificaciones: [
-      { campo: 'Pantalla', valor: '6.1” 1170 x 2532 píxeles' },
-      { campo: 'Procesador', valor: 'Apple A14 Bionic' },
-      { campo: 'Almacenamiento', valor: '128GB' },
-      { campo: 'Expansión', valor: 'Sin micro SD' },
-      { campo: 'Cámara', valor: 'Dual 12MP + 12MP' },
-      { campo: 'Batería', valor: '2815 mAh' },
-      { campo: 'IOS', valor: 'iOS 16' },
-      { campo: 'Perfil', valor: '7.4 mm' },
-      { campo: 'Peso', valor: '164 g' },
-    ]
-  },
+  id: 6,
+  nombre: 'iPhone 16 Pro 256GB Sim Fisica',
+  marca: 'APPLE',
+  imagenPrincipal: '/iphone16pro.png',
+  imagenes: [
+    '/imagenes/iphone16pro-azul.png',
+    '/imagenes/iphone16pro-gris.png',
+    '/imagenes/iphone16pro-plata.png',
+  ],
+  precioOriginal: 1599000,
+  precioActual: 1499000,
+  colores: ['Azul Titanio', 'Gris Titanio', 'Plata Titanio'],
+  descripcion: 'iPhone 16 Pro con diseño de titanio, chip A18 Pro, pantalla OLED 6.3″ y sistema avanzado de cámaras.',
+  especificaciones: [
+    { campo: 'Pantalla', valor: '6.3” Super Retina XDR OLED, 2622 × 1206, 120 Hz' },
+    { campo: 'Procesador', valor: 'Apple A18 Pro (6 núcleos CPU, 6 núcleos GPU)' },
+    { campo: 'Almacenamiento', valor: '256 GB' },
+    { campo: 'Cámara', valor: '48 MP (Fusion) + 48 MP ultra gran angular + 12 MP telefoto 5×' },
+    { campo: 'Video', valor: '4K a 120 fps Dolby Vision' },
+    { campo: 'Batería', valor: '27 h video (aprox.)' },
+    { campo: 'Conectividad', valor: 'USB-C (USB 3), Wi-Fi 7, Bluetooth 5.3' },
+    { campo: 'Material', valor: 'Chasis de titanio grado 5' },
+    { campo: 'Peso', valor: '199 g' },
+  ]
+},
+
   {
     id: 7,
     nombre: 'iPhone 12 128GB Sim Fisica',

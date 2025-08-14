@@ -1,0 +1,149 @@
+/* Contenedor principal del dropdown */
+.sort-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Botón principal - idéntico a filtrar-btn */
+.sort-dropdown-btn {
+  background: transparent;
+  border: 2.5px solid white;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 28px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 200px;
+  justify-content: space-between;
+}
+
+.sort-dropdown-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Flecha del dropdown */
+.sort-arrow {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+  color: inherit;
+}
+
+.sort-arrow.up {
+  transform: rotate(180deg);
+}
+
+.sort-arrow.down {
+  transform: rotate(0deg);
+}
+
+/* Menú desplegable */
+.sort-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2.5px solid white;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  overflow: hidden;
+  animation: slideDown 0.2s ease-out;
+  margin-top: -2.5px;
+}
+
+/* Opciones del menú */
+.sort-option {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option-text {
+  flex: 1;
+}
+
+.sort-option:last-child {
+  border-bottom: none;
+}
+
+.sort-option:hover {
+  background: #f5f5f5;
+  color: #000;
+  font-weight: 600;
+}
+
+.sort-option.selected {
+  background: #e6f3ff;
+  color: #007bff;
+  font-weight: 700;
+}
+
+.sort-option.selected:hover {
+  background: #d1e9ff;
+}
+
+/* Icono de selección mejorado */
+.check-icon {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 18px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 123, 255, 0.1);
+  margin-left: 10px;
+  transition: all 0.2s ease;
+}
+
+.sort-option.selected .check-icon {
+  background: #007bff;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Animación */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sort-dropdown-btn {
+    min-width: 180px;
+    padding: 12px 18px;
+    font-size: 16px;
+  }
+  
+  .sort-option {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}

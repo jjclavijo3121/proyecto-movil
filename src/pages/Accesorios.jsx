@@ -1,9 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles/Productos.css';
 import { Link } from 'react-router-dom';
 import productos from '../data/DataProductos.js';
+import FilterMenu from '../components/FilterMenu/FilterMenu.jsx';
+import SortDropdown from '../components/SortDropdown/SortDropdown.jsx';
+import { sortProducts } from '../utils/sortProducts.js';
 
 const Accesorios = () => {
+  // Estados para el menú de filtros
+  const [isFilterMenuOpen, setIsFilterMenuOpen] = useState(false);
+  const [activeFilters, setActiveFilters] = useState({});
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [sortType, setSortType] = useState('caracteristicas');
+
   // 🔹 Scroll al inicio
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -13,6 +22,80 @@ const Accesorios = () => {
   const accesoriosProducts = productos.filter(
     (prod) => prod.marca.toLowerCase() === 'accesorios'
   );
+
+  // Aplicar filtros y ordenamiento a los productos de accesorios
+  useEffect(() => {
+    let filtered = accesoriosProducts;
+
+    // Aplicar filtros activos
+    Object.keys(activeFilters).forEach(filterKey => {
+      const filterValue = activeFilters[filterKey];
+      if (!filterValue) return;
+
+      switch (filterKey) {
+        case 'categoria':
+          if (filterValue === 'accesorios') {
+            filtered = filtered.filter(prod => 
+              prod.marca.toLowerCase() === 'accesorios'
+            );
+          } else if (filterValue === 'audifonos') {
+            filtered = filtered.filter(prod => 
+              prod.nombre.toLowerCase().includes('airpods') ||
+              prod.nombre.toLowerCase().includes('audífono') ||
+              prod.nombre.toLowerCase().includes('audifono')
+            );
+          }
+          break;
+        case 'precio':
+          filtered = filtered.filter(prod => {
+            const precio = prod.precioActual;
+            switch (filterValue) {
+              case '0-500':
+                return precio <= 500000;
+              case '500-1000':
+                return precio > 500000 && precio <= 1000000;
+              case '1000-2000':
+                return precio > 1000000 && precio <= 2000000;
+              case '2000+':
+                return precio > 2000000;
+              default:
+                return true;
+            }
+          });
+          break;
+        default:
+          break;
+      }
+    });
+
+    // Aplicar ordenamiento
+    const sorted = sortProducts(filtered, sortType);
+    setFilteredProducts(sorted);
+  }, [activeFilters, sortType]);
+
+  // Inicializar productos filtrados
+  useEffect(() => {
+    setFilteredProducts(accesoriosProducts);
+  }, []);
+
+  const handleFilterChange = (categoryKey, value) => {
+    if (categoryKey === 'clear') {
+      setActiveFilters({});
+    } else {
+      setActiveFilters(prev => ({
+        ...prev,
+        [categoryKey]: prev[categoryKey] === value ? null : value
+      }));
+    }
+  };
+
+  const toggleFilterMenu = () => {
+    setIsFilterMenuOpen(!isFilterMenuOpen);
+  };
+
+  const handleSortChange = (newSortType) => {
+    setSortType(newSortType);
+  };
 
   return (
     <>
@@ -27,13 +110,14 @@ const Accesorios = () => {
       <div className="coleccion-contenedor">
         <div className="coleccion-header">
           <div className="filtros">
-            <button className="filtro-btn">
+            <button className="filtro-btn" onClick={toggleFilterMenu}>
               <i className="icono-ajustes" /> Filtrar
             </button>
             <div className="dropdown">
-              <button className="caracteristicas-btn">
-                Características <span className="flecha-abajo">▼</span>
-              </button>
+              <SortDropdown 
+                onSortChange={handleSortChange}
+                currentSort={sortType}
+              />
             </div>
           </div>
 
@@ -46,9 +130,17 @@ const Accesorios = () => {
         </div>
       </div>
 
+      {/* Componente del menú de filtros */}
+      <FilterMenu
+        isOpen={isFilterMenuOpen}
+        onClose={() => setIsFilterMenuOpen(false)}
+        onFilterChange={handleFilterChange}
+        activeFilters={activeFilters}
+      />
+
       <div className="productos-wrapper">
         <div className="productos-container">
-          {accesoriosProducts.map((prod) => (
+          {filteredProducts.map((prod) => (
             <Link
               to={`/producto/${prod.id}`}
               key={prod.id}
