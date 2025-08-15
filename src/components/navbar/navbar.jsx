@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import './Navbar.css';
 import { FiSearch, FiShoppingCart } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import ProfileDropdown from './ProfileDropdown';
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
@@ -65,6 +66,7 @@ const Navbar = () => {
               <FiSearch />
             </div>
           </div>
+          <ProfileDropdown />
           <div className="icon icon-market"><FiShoppingCart /></div>
         </div>
       </div>
