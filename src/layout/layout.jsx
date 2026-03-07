@@ -7,7 +7,7 @@ function Layout() {
   const location = useLocation();
 
   // Verificamos si estamos en la página de detalle del producto
-  const isDetailsPage = location.pathname.startsWith('/detalle/');
+  const isDetailsPage = location.pathname.startsWith('/producto/');
 
   return (
     <div

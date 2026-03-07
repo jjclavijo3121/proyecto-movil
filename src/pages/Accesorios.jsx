@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import './styles/Productos.css';
 import { Link } from 'react-router-dom';
 import productos from '../data/DataProductos.js';
@@ -19,8 +19,9 @@ const Accesorios = () => {
   }, []);
 
   // 🔹 Filtrar solo productos con marca "Accesorios"
-  const accesoriosProducts = productos.filter(
-    (prod) => prod.marca.toLowerCase() === 'accesorios'
+  const accesoriosProducts = useMemo(
+    () => productos.filter((prod) => prod.marca.toLowerCase() === 'accesorios'),
+    []
   );
 
   // Aplicar filtros y ordenamiento a los productos de accesorios
@@ -71,12 +72,12 @@ const Accesorios = () => {
     // Aplicar ordenamiento
     const sorted = sortProducts(filtered, sortType);
     setFilteredProducts(sorted);
-  }, [activeFilters, sortType]);
+  }, [activeFilters, sortType, accesoriosProducts]);
 
   // Inicializar productos filtrados
   useEffect(() => {
     setFilteredProducts(accesoriosProducts);
-  }, []);
+  }, [accesoriosProducts]);
 
   const handleFilterChange = (categoryKey, value) => {
     if (categoryKey === 'clear') {
@@ -102,7 +103,7 @@ const Accesorios = () => {
       {/* Banner de video */}
       <div className="productos-banner-video">
         <video autoPlay muted loop playsInline>
-          <source src="/banner_video_accesorios.mp4" type="video/mp4" />
+          <source src="/banner_video.mp4" type="video/mp4" />
           Tu navegador no soporta este video.
         </video>
       </div>
@@ -149,7 +150,7 @@ const Accesorios = () => {
               <div className="producto-card-wrapper">
                 <div className="producto-card">
                   <img
-                    src={prod.imagenPrincipal || '/placeholder.jpg'}
+                    src={prod.imagenPrincipal || '/phone.png'}
                     alt={prod.nombre}
                     className="producto-imagen-ajustada"
                   />

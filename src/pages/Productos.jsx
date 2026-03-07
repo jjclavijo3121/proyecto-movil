@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import './styles/Productos.css';
 import { Link } from 'react-router-dom'; 
 import productos from "../data/DataProductos.js";
@@ -19,7 +19,10 @@ const Productos = () => {
   }, []);
 
   // 🔵 Solo productos de la marca Apple inicialmente
-  const appleProducts = productos.filter(prod => prod.marca.toLowerCase() === 'apple');
+  const appleProducts = useMemo(
+    () => productos.filter(prod => prod.marca.toLowerCase() === 'apple'),
+    []
+  );
 
   // Aplicar filtros y ordenamiento a los productos
   useEffect(() => {
@@ -73,12 +76,12 @@ const Productos = () => {
     // Aplicar ordenamiento
     const sorted = sortProducts(filtered, sortType);
     setFilteredProducts(sorted);
-  }, [activeFilters, sortType]);
+  }, [activeFilters, sortType, appleProducts]);
 
   // Inicializar productos filtrados
   useEffect(() => {
     setFilteredProducts(appleProducts);
-  }, []);
+  }, [appleProducts]);
 
   const handleFilterChange = (categoryKey, value) => {
     if (categoryKey === 'clear') {
@@ -146,7 +149,7 @@ const Productos = () => {
               <div className="producto-card-wrapper">
                 <div className="producto-card">
                   <img
-                    src={prod.imagenPrincipal || prod.imagen || '/placeholder.jpg'}
+                    src={prod.imagenPrincipal || prod.imagen || '/phone.png'}
                     alt={prod.nombre}
                     className="producto-imagen-ajustada"
                   />

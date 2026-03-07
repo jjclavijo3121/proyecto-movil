@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import './styles/ProductoSamsung.css';
 import { Link } from 'react-router-dom';
 import productos from "../data/DataProductos.js";
@@ -13,7 +13,10 @@ const ProductoSamsung = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [sortType, setSortType] = useState('caracteristicas');
 
-  const samsungProducts = productos.filter(prod => prod.marca.toLowerCase() === 'samsung');
+  const samsungProducts = useMemo(
+    () => productos.filter(prod => prod.marca.toLowerCase() === 'samsung'),
+    []
+  );
 
   // Aplicar filtros y ordenamiento a los productos Samsung
   useEffect(() => {
@@ -57,12 +60,12 @@ const ProductoSamsung = () => {
     // Aplicar ordenamiento
     const sorted = sortProducts(filtered, sortType);
     setFilteredProducts(sorted);
-  }, [activeFilters, sortType]);
+  }, [activeFilters, sortType, samsungProducts]);
 
   // Inicializar productos filtrados
   useEffect(() => {
     setFilteredProducts(samsungProducts);
-  }, []);
+  }, [samsungProducts]);
 
   const handleFilterChange = (categoryKey, value) => {
     if (categoryKey === 'clear') {
@@ -128,7 +131,7 @@ const ProductoSamsung = () => {
               <div className="producto-card-wrapper">
                 <div className="producto-card">
                   <img
-                    src={prod.imagenPrincipal || prod.imagen || '/placeholder.jpg'}
+                    src={prod.imagenPrincipal || prod.imagen || '/phone-samsung.png'}
                     alt={prod.nombre}
                     className="producto-imagen-ajustada"
                   />

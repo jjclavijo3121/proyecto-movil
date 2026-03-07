@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FiUser, FiLogOut, FiSettings } from 'react-icons/fi';
 import './ProfileDropdown.css';
-import { useUser } from '../../context/UserContext';
+import { useUser } from '../../context/useUser.js';
 
 const ProfileDropdown = () => {
   const { user, isLoggedIn, login, register, logout, validateEmail, validateLogin } = useUser();
@@ -108,7 +108,7 @@ const ProfileDropdown = () => {
         } else {
           setErrors({ general: result.message || 'Error de autenticación' });
         }
-      } catch (error) {
+      } catch {
         setErrors({ general: 'Error de conexión. Intente nuevamente.' });
       } finally {
         setIsLoading(false);
@@ -140,7 +140,7 @@ const ProfileDropdown = () => {
           });
           setErrors({});
         }
-      } catch (error) {
+      } catch {
         setErrors({ general: 'Error al registrar usuario. Intente nuevamente.' });
       } finally {
         setIsLoading(false);
@@ -419,3 +419,4 @@ const ProfileDropdown = () => {
 };
 
 export default ProfileDropdown;
+

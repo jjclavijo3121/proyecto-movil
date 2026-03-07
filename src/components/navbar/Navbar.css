@@ -67,6 +67,20 @@
   transition: color 0.3s ease;
 }
 
+.icon-button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
 .icon:hover {
   color: #0071e3;
 }
@@ -211,6 +225,5 @@
   cursor: not-allowed;
   pointer-events: none;
 }
-
 
 

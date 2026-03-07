@@ -1,7 +1,7 @@
 .body-background {
   border-color: aqua;
   min-height: 78vh;
-  width: 100vw;
+  width: 100%;
   background: #eeeeee;
   display: flex;
   flex-direction: column;
@@ -185,7 +185,7 @@
 .body-background-samsung {
   border-color: aqua;
   min-height: 78vh;
-  width: 100vw;
+  width: 100%;
   background: #eeeeee;
   display: flex;
   flex-direction: column;
@@ -255,4 +255,94 @@
 
 .boton-borde-samsung:hover {
   background-color: #c1c1c1;
+}
+
+@media (max-width: 1024px) {
+  .body-main-image {
+    margin-top: 4rem;
+  }
+
+  .inicio-titulo,
+  .inicio-titulo-samsung {
+    font-size: 2.1rem;
+  }
+
+  .inicio-subtitulo,
+  .inicio-subtitulo-samsung {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .body-background,
+  .body-background-samsung {
+    padding: 1.25rem 1rem 0;
+    min-height: auto;
+  }
+
+  .inicio-titulo,
+  .inicio-titulo-samsung,
+  .iphone16-titulo {
+    font-size: 1.8rem;
+    margin-top: 1.2rem;
+  }
+
+  .inicio-subtitulo,
+  .inicio-subtitulo-samsung,
+  .iphone16-subtitulo {
+    font-size: 1rem;
+  }
+
+  .inicio-botones,
+  .inicio-botones-samsung {
+    width: 100%;
+    margin-top: 1.2rem;
+    gap: 0.75rem;
+  }
+
+  .boton-azul,
+  .boton-borde,
+  .boton-borde-iphone,
+  .boton-borde-samsung {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+
+  .home-banner-imagen {
+    padding-bottom: 48px;
+  }
+
+  .home-banner-imagen img {
+    width: min(92vw, 540px);
+  }
+
+  .seccion-iphone16 {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .body-main-image {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inicio-titulo,
+  .inicio-titulo-samsung,
+  .iphone16-titulo {
+    font-size: 1.5rem;
+  }
+
+  .inicio-subtitulo,
+  .inicio-subtitulo-samsung {
+    font-size: 0.95rem;
+  }
+
+  .boton-azul,
+  .boton-borde,
+  .boton-borde-iphone,
+  .boton-borde-samsung {
+    max-width: 100%;
+  }
 }

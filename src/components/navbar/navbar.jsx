@@ -62,12 +62,17 @@ const Navbar = () => {
                 onBlur={handleBlur}
               />
             )}
-            <div className="icon icon-search" onClick={handleSearchClick} tabIndex={0}>
+            <button
+              type="button"
+              className="icon icon-button icon-search"
+              onClick={handleSearchClick}
+              aria-label="Abrir busqueda"
+            >
               <FiSearch />
-            </div>
+            </button>
           </div>
           <ProfileDropdown />
-          <div className="icon icon-market"><FiShoppingCart /></div>
+          <span className="icon icon-market" aria-hidden="true"><FiShoppingCart /></span>
         </div>
       </div>
     </nav>

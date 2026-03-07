@@ -140,3 +140,86 @@
   transform: scale(1.05); /* Efecto de zoom */
 }
 
+@media (max-width: 1024px) {
+  .quienes-banner-imagen {
+    height: 620px;
+  }
+
+  .quienes-titulo-banner {
+    font-size: 2.4rem;
+  }
+
+  .quienes-historia h1,
+  .quienes-productos-seccion h1 {
+    font-size: 2rem;
+  }
+
+  .quienes-historia p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .quienes-banner-imagen {
+    height: 420px;
+  }
+
+  .quienes-titulo-banner {
+    font-size: 1.9rem;
+    padding: 0 1rem;
+  }
+
+  .quienes-tarjetas-seccion,
+  .quienes-historia,
+  .quienes-productos-seccion {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .quienes-tarjeta {
+    max-width: 100%;
+    padding: 1.25rem;
+  }
+
+  .quienes-tarjeta img {
+    max-height: 180px;
+    margin-bottom: 1rem;
+  }
+
+  .quienes-tarjeta h2 {
+    font-size: 1.2rem;
+  }
+
+  .quienes-tarjeta p {
+    font-size: 1rem;
+  }
+
+  .quienes-historia h1,
+  .quienes-productos-seccion h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .quienes-historia p {
+    font-size: 1rem;
+  }
+
+  .quienes-vermas-btn {
+    width: 100%;
+    max-width: 360px;
+    padding: 14px 18px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quienes-banner-imagen {
+    height: 340px;
+  }
+
+  .quienes-titulo-banner {
+    font-size: 1.55rem;
+  }
+}
+

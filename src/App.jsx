@@ -8,6 +8,7 @@ import CardDetails from './components/Cards/CardDetails.jsx';
 import ProductoSamsung from './pages/ProductoSamsung';
 import Accesorios from './pages/Accesorios.jsx'; 
 import ScrollToTop from './components/ScrollToTop.jsx';
+import NotFound from './pages/NotFound.jsx';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="samsung" element={<ProductoSamsung />} />
           <Route path="producto/:id" element={<CardDetails />} />
           <Route path="accesorios" element={<Accesorios />} /> 
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
@@ -28,7 +30,6 @@ function App() {
 }
 
 export default App;
-
 
 
 
